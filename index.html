@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#6d28d9"><title>مولّد تدريبات صعوبات التعلم الذكي</title>
+<style>
+:root{--bg:#f7f5fc;--card:#fff;--ink:#18151f;--muted:#716b7d;--line:#e8e2f1;--p:#6d28d9;--p2:#8b5cf6;--soft:#f1ecfb;--shadow:0 18px 50px rgba(64,36,110,.10)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Tajawal","Segoe UI",Tahoma,Arial,sans-serif;line-height:1.8}
+button,input{font:inherit}button{cursor:pointer}body,.panel,.hero,.workflow,.step,.side,.content,.secondary,.mini,.search,.stat,.command-box{transition:background-color .25s ease,color .25s ease,border-color .25s ease}.wrap{width:min(1120px,calc(100% - 28px));margin:auto}
+.top{padding:22px 0 0;display:flex;justify-content:space-between;align-items:center}.logo{font-weight:900;color:var(--p);font-size:19px}.top-actions{display:flex;gap:8px}.mini{width:42px;height:42px;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+.hero{margin-top:22px;padding:42px;border:1px solid var(--line);border-radius:28px;background:linear-gradient(135deg,#fff 0%,#f0ebfb 100%);box-shadow:var(--shadow);overflow:hidden;position:relative}.hero:before{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:#8b5cf622;left:-100px;bottom:-140px}
+.kicker{display:inline-flex;background:#eee7fb;color:#5b21b6;padding:5px 11px;border-radius:999px;font-size:12px;font-weight:800}h1{font-size:clamp(30px,5vw,50px);line-height:1.18;margin:14px 0 8px;max-width:780px}.hero p{color:var(--muted);font-size:16px;max-width:760px;margin:0}.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.btn{border-radius:13px;padding:11px 17px;border:1px solid var(--line);font-weight:800}.primary{background:var(--p);border-color:var(--p);color:#fff}.secondary{background:#fff;color:var(--ink)}
+.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:#18151f;color:#fff;padding:10px 16px;border-radius:12px;z-index:20;box-shadow:0 12px 30px #0002;font-size:13px}
+.workflow{margin-top:18px;padding:22px;background:var(--card);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow)}.whead{display:flex;justify-content:space-between;gap:16px;align-items:flex-start}.whead h2{margin:5px 0;font-size:21px}.whead p{margin:0;color:var(--muted);font-size:13px}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:9px;margin-top:18px}.step{border:1px solid var(--line);background:#fff;border-radius:14px;padding:12px;text-align:right;min-height:108px;transition:.2s}.step:hover,.step.active{border-color:#c4b5fd;box-shadow:0 8px 22px #6d28d914;transform:translateY(-2px)}.step .n{width:29px;height:29px;display:grid;place-items:center;background:var(--soft);color:var(--p);border-radius:8px;font-weight:900;margin-bottom:7px}.step.active .n{background:var(--p);color:#fff}.step b{display:block;font-size:13px}.step small{display:block;color:var(--muted);font-size:10px;line-height:1.55}
+.bar{height:5px;background:var(--soft);border-radius:99px;margin-top:14px;overflow:hidden}.bar i{display:block;width:20%;height:100%;background:linear-gradient(90deg,var(--p),var(--p2));transition:.3s}
+.layout{display:block;margin:18px 0 50px}.panel{background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow)}
+.content{overflow:hidden}.sec{border-bottom:1px solid var(--line)}.sec:last-child{border-bottom:0}.sec-head{display:flex;align-items:center;gap:11px;padding:18px 20px;cursor:pointer}.sec-head .n{width:34px;height:34px;display:grid;place-items:center;background:var(--soft);color:var(--p);border-radius:10px;font-weight:900;flex:none}.sec-head h3{font-size:17px;margin:0;flex:1}.arrow{color:var(--muted);transition:.2s}.sec.open .arrow{transform:rotate(180deg)}.sec-body{display:none;padding:0 20px 20px;color:#3c3745;font-size:14px}.sec.open .sec-body{display:block}.sec-body p{margin:8px 0}footer{padding:0 0 38px;text-align:center;color:var(--muted);font-size:12px}
+body.dark{--bg:#100e14;--card:#18151f;--ink:#f5f1fa;--muted:#aaa2b4;--line:#30283a;--soft:#211b2d}body.dark .hero{background:linear-gradient(135deg,#18151f,#211a2d)}body.dark .secondary,.dark .step{background:var(--card);color:var(--ink)}
+@media(max-width:850px){.layout{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.whead{flex-direction:column}}@media(max-width:520px){.hero{padding:28px 20px}.hero-actions .btn{width:100%}.steps{grid-template-columns:1fr}.sec-head{padding:15px}.sec-body{padding:0 15px 16px}}
+
+/* --- Dynamic professional layer --- */
+body{overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;
+background:radial-gradient(circle at 85% 12%,rgba(139,92,246,.10),transparent 25%),
+radial-gradient(circle at 8% 72%,rgba(109,40,217,.06),transparent 23%)}
+.progress-top{position:fixed;top:0;right:0;height:3px;width:100%;z-index:100;background:transparent}
+.progress-top i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--p),var(--p2));box-shadow:0 0 14px rgba(139,92,246,.45)}
+.hero{transition:transform .35s ease,box-shadow .35s ease}
+.hero:hover{transform:translateY(-2px);box-shadow:0 22px 65px rgba(64,36,110,.13)}
+.hero .hero-glow{position:absolute;inset:auto -80px -120px auto;width:280px;height:280px;border-radius:50%;
+background:radial-gradient(circle,rgba(139,92,246,.18),transparent 68%);pointer-events:none}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px;max-width:720px}
+.stat{padding:12px 14px;border:1px solid var(--line);background:#ffffffb8;backdrop-filter:blur(8px);border-radius:14px}
+.stat strong{display:block;font-size:20px;color:var(--p);line-height:1.2}.stat span{font-size:11px;color:var(--muted)}
+body.dark .stat{background:#18151fb8}
+.workflow{position:sticky;top:10px;z-index:10;backdrop-filter:blur(14px);background:color-mix(in srgb,var(--card) 88%,transparent)}
+.step{position:relative;overflow:hidden}
+.step:after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 20%,rgba(139,92,246,.07),transparent 75%);
+transform:translateX(120%);transition:.55s}.step:hover:after{transform:translateX(-120%)}
+.step.done .n{background:#22c55e;color:#fff}.step.done:before{content:"✓";position:absolute;left:10px;top:10px;color:#16a34a;font-weight:900}
+.step.active{background:linear-gradient(135deg,#fff,#f5f0ff)}
+body.dark .step.active{background:linear-gradient(135deg,#18151f,#241d32)}
+.section-tools{display:flex;gap:7px;margin-top:12px;flex-wrap:wrap}
+.section-tools button{border:1px solid var(--line);background:var(--soft);color:var(--p);border-radius:9px;padding:6px 9px;font-size:11px;font-weight:800}
+.sec.open{background:linear-gradient(90deg,transparent,rgba(139,92,246,.025),transparent)}
+.sec-body p{animation:fadeUp .25s ease both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+.fab{position:fixed;bottom:20px;left:20px;width:48px;height:48px;border:0;border-radius:15px;background:var(--p);color:#fff;
+box-shadow:0 12px 30px rgba(109,40,217,.28);z-index:30;display:none}
+.fab.show{display:block}
+.command{position:fixed;inset:0;background:rgba(20,15,30,.38);backdrop-filter:blur(5px);z-index:200;display:none;align-items:flex-start;justify-content:center;padding-top:12vh}
+.command.show{display:flex}
+.command-box{width:min(600px,calc(100% - 28px));background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:0 30px 80px #0003;overflow:hidden}
+.command input{width:100%;border:0;border-bottom:1px solid var(--line);padding:17px;background:transparent;color:var(--ink);outline:0}
+.command-list{max-height:55vh;overflow:auto;padding:8px}
+.command-list button{display:block;width:100%;text-align:right;border:0;background:transparent;padding:11px 12px;border-radius:10px;color:var(--ink)}
+.command-list button:hover{background:var(--soft);color:var(--p)}
+@media(max-width:850px){.workflow{position:relative;top:auto}.stats{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.stats{grid-template-columns:1fr}.fab{bottom:14px;left:14px}}
+
+/* Dark-mode readability fixes */
+body.dark .sec-body{color:#eee9f5}
+body.dark .sec-body,body.dark .sec-body p,body.dark .sec-body li{color:#eee9f5 !important}
+body.dark .sec-head h3{color:#f7f3fb}
+body.dark .sec-head .n{color:#c4b5fd;background:#2a2140}
+body.dark .arrow{color:#c7bfd3}
+body.dark 
+
+body.dark 
+body.dark 
+body.dark .workflow p,.dark .whead p{color:#aaa2b4}
+body.dark .kicker{background:#2a2140;color:#d8c9ff}
+body.dark .hero p{color:#c0b8ca}
+body.dark .stat{border-color:#3a3048}
+body.dark .stat span{color:#aaa2b4}
+body.dark .section-tools button{background:#2a2140;border-color:#3a3048;color:#d8c9ff}
+body.dark .copy-section{color:#d8c9ff}
+body.dark .sec.open{background:linear-gradient(90deg,transparent,rgba(139,92,246,.08),transparent)}
+body.dark .btn.secondary{background:#211b2d;border-color:#3a3048;color:#f2edf8}
+body.dark .mini{background:#18151f;border-color:#3a3048;color:#f2edf8}
+body.dark .command-box{background:#18151f}
+body.dark .command input{color:#f7f3fb}
+body.dark .command input::placeholder{color:#93899f}
+body.dark .command-list button{color:#f2edf8}
+body.dark .command-list button:hover{background:#2a2140;color:#fff}
+body.dark footer{color:#93899f}
+
+.ig-link{width:42px;height:42px;display:grid;place-items:center;text-decoration:none;border:1px solid var(--line);
+border-radius:12px;background:var(--card);color:var(--p);font-size:23px;font-weight:900;transition:.2s}
+.ig-link:hover{transform:translateY(-2px);border-color:#c4b5fd;background:var(--soft)}
+.instagram-btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;background:#fff;color:var(--p);border-color:#d9cef0}
+.instagram-btn:hover{transform:translateY(-2px);border-color:#bda8e8;background:var(--soft)}
+body.dark .ig-link{background:var(--card);border-color:#3a3048;color:#d8c9ff}
+body.dark .instagram-btn{background:#211b2d;border-color:#3a3048;color:#e9ddff}
+@media(max-width:520px){.instagram-btn{width:100%}}
+</style></head>
+<body><div class="progress-top"><i id="readProgress"></i></div>
+<header class="wrap"><div class="top"><div class="logo">alking.tech</div><div class="top-actions">
+<a class="ig-link" href="https://www.instagram.com/alking.tech/" target="_blank" rel="noopener noreferrer" aria-label="Instagram alking.tech" title="Instagram @alking.tech">◎</a><button class="mini" id="theme">◐</button><button class="mini" id="copyTop" title="نسخ كامل البرومبت">⧉</button></div></div>
+<section class="hero"><div class="hero-glow"></div><span class="kicker">أداة للمعلمين والمعلمات</span><h1>مولّد تدريبات صعوبات التعلم الذكي</h1><p>نظام متكامل لتحويل الهدف التعليمي إلى تدريبات مكيّفة، ثم إلى بطاقات عمل A4 عند الطلب.</p><div class="hero-actions"><button class="btn primary" id="copy">نسخ البرومبت كاملًا</button><button class="btn secondary" id="toggle">فتح جميع الأقسام</button> <a class="btn instagram-btn" href="https://www.instagram.com/alking.tech/" target="_blank" rel="noopener noreferrer">تابعني على Instagram ↗</a>
+</div>
+<div class="stats">
+<div class="stat"><strong>19</strong><span>قسمًا منظمًا</span></div>
+<div class="stat"><strong>5</strong><span>مراحل في المسار</span></div>
+<div class="stat"><strong>A4</strong><span>بطاقات جاهزة للطباعة</span></div>
+</div></section></header>
+<main class="wrap">
+<section class="workflow"><div class="whead"><div><span class="kicker">مسار الاستخدام</span><h2>اتبع الخطوات بالترتيب</h2><p>انتقل بين مراحل النظام من خلال المسار أدناه.</p></div><button class="btn secondary" id="reset">إعادة المسار</button></div>
+<div class="steps" id="steps"><button class="step active"><span class="n">1</span><b>البيانات</b><small>نوع الصعوبة، الشدة، الصف، المصدر</small></button><button class="step"><span class="n">2</span><b>اختيار الهدف</b><small>استخراج الأهداف ثم اختيار الهدف</small></button><button class="step"><span class="n">3</span><b>التخصيص</b><small>تكييف عام أو حسب احتياج الطالب</small></button><button class="step"><span class="n">4</span><b>التدريبات</b><small>تهيئة ← تدريب موجّه ← تحقق</small></button><button class="step"><span class="n">5</span><b>البطاقات</b><small>ثلاث بطاقات A4 مستقلة</small></button></div><div class="bar"><i id="bar"></i></div></section>
+<section class="layout"><section class="panel content" id="content"></section></section></main>
+<footer>تصميم وتنظيم <strong>alking.tech</strong></footer>
+<button class="fab" id="topBtn" aria-label="العودة للأعلى">↑</button>
+<div class="command" id="command">
+ <div class="command-box">
+  <input id="commandInput" placeholder="ابحث عن قسم أو إجراء..." autocomplete="off">
+  <div class="command-list" id="commandList"></div>
+ </div>
+</div>
+<script>
+const data=[["01", "البيانات المطلوبة", "أرسل نوع الصعوبة، مستوى الشدة، الصف أو العمر التقريبي، وملف الأهداف أو الملزمة أو صورة واضحة منها."], ["02", "الهوية والدور", "أنت خبير تربية خاصة وصعوبات تعلم وتصميم تعليمي. مهمتك تحويل الهدف التعليمي الموجود في المصدر المرفق فقط إلى ٣ تدريبات عملية متدرجة، ثم عند الطلب تحويلها إلى ٣ بطاقات عمل بصرية A4 مستقلة."], ["03", "Source Lock — قفل المصدر", "المصدر المرفق هو المرجع الوحيد للمعلومة التعليمية. لا تخترع أهدافاً، ولا تغيّر معنى الهدف، ولا توسّعه. يجوز ابتكار أمثلة تخدم الهدف مباشرة دون إضافة مفاهيم أو حقائق جديدة خارج المصدر. عند الشك لا تخمّن."], ["04", "التعامل مع الملف", "إذا احتوى الملف أهدافاً متعددة، اعرضها مرقمة بالترتيب كما وردت، ثم اطلب من المستخدم اختيار رقم الهدف. لا تولّد أي تدريب قبل اختيار الهدف."], ["05", "الأهداف المركبة", "إذا كان الهدف واسعاً أو مركباً، لا تستبدله بهدف أبسط ولا تخترع أهدافاً فرعية للمستخدم. حلّل الأداء داخلياً إلى خطوات تخدم الهدف نفسه، واجعل التدريبات الثلاثة تقود إلى الهدف الأصلي."], ["06", "التخصيص", "بعد اختيار الهدف: ١ — تكييف عام، أو ٢ — تخصيص حسب احتياج الطالب. عند اختيار ١ انتقل مباشرة. عند اختيار ٢ اطلب فقط ما يعرفه المعلم عن قدرات الطالب واحتياجاته المؤثرة في تنفيذ الهدف."], ["07", "التحليل الداخلي", "حلّل بصمت نوع الأداء المطلوب، مستوى التجريد والحمل المعرفي واللغوي، العائق المرتبط بنوع الصعوبة، وطريقة الاستجابة المناسبة، دون تغيير المهارة المستهدفة."], ["08", "مبادئ التكييف", "لا تخفض المستوى التعليمي بلا سبب. خفف العوائق المحيطة بالهدف مثل كثافة النص، عدد المثيرات، طول التعليمات، الحمل على الذاكرة العاملة وطريقة الاستجابة. راعِ العمر بلا طفلنة."], ["09", "التكييف حسب الفئة", "التوحد: تنظيم بصري وخطوات قصيرة ولغة مباشرة وتقليل المشتتات. ADHD: مهمة قصيرة وتعليمة واحدة واستجابة سريعة وتغذية راجعة قريبة. الإعاقة الفكرية: مفردات بسيطة وخطوة واحدة وتكرار وظيفي. عسر القراءة: دعم صوتي بصري ونصوص قصيرة وتباعد واضح. عسر الكتابة: تقليل الكتابة الحرة عند عدم كونها الهدف. عسر الحساب: تمثيل مناسب ومسألة واحدة وخطوات مرقمة. اضطرابات النطق: نمذجة وتكرار موجّه عندما يكون النطق هو الهدف. التأتأة: عدم فرض السرعة وعدم المقاطعة."], ["10", "مستوى الشدة", "بسيطة: دعم محدود واستقلال مرتفع. متوسطة: تجزئة أوضح ودعم أكبر وعناصر أقل. شديدة: خطوة واحدة بالمرة وخيارات محدودة ودعم مباشر ومنظم. لا تغيّر الهدف بسبب الشدة."], ["11", "اختلاف الفئات", "يجب أن يظهر اختلاف التكييف فعلياً في بنية النشاط: عدد العناصر، التعليمات، نوع الاستجابة، الدعم البصري، التلميح، كثافة النص، التجريد أو التعزيز. ممنوع نسخ النشاط نفسه وتغيير اسم الفئة فقط."], ["12", "نظام التدريبات", "١ — التهيئة: دعم أكبر وحمل أقل. ٢ — التدريب الموجّه: ممارسة فعلية مع تقليل الدعم. ٣ — تحقق من الإتقان: استقلال أكبر وتحقق من نفس الهدف. التدرج يجب أن يكون تربوياً حقيقياً."], ["13", "عناصر كل تدريب", "اسم قصير، الهدف، الأدوات إن وجدت، تعليمات المعلم، تعليمة الطالب، ما يفعله الطالب، نوع التلميح بدقة، معيار نجاح قابل للملاحظة، تعزيز اختياري، وزمن تقريبي."], ["14", "الصور والإجابات", "لا تستخدم صورة تكشف الإجابة أو تضيف معلومة أو تشتت الطالب. في الاختيار والمطابقة والتصنيف يجب وجود إجابة صحيحة واضحة واحدة."], ["15", "المراجعة الصامتة", "تحقق داخلياً من توافق التدريب مع الهدف والمصدر والصعوبة والشدة والعمر وطريقة الاستجابة والتدرج ومعيار النجاح، وأصلح أي خلل قبل العرض."], ["16", "بعد التدريبات", "بعد عرض التدريبات اسأل فقط: هل ترغب بتجهيز التدريبات على هيئة بطاقات عمل بصرية جاهزة للطباعة؟ ١ — جهز البطاقات. ٢ — لا."], ["17", "بطاقات A4", "عند اختيار ١: ١ التهيئة، ٢ التدريب الموجّه، ٣ تحقق الإتقان. كل بطاقة صورة مستقلة A4 عمودي، موجهة للطالب مباشرة. لا دمج ولا كولاج."], ["18", "قفل التصميم والمسار", "محتوى التدريب يصبح مقفلاً عند اعتماد البطاقات. لا تغيّر الهدف أو المهمة أو الأمثلة ولا تضف معرفة جديدة. البطاقة تعرض فقط ما يحتاج الطالب لتنفيذ المهمة. بعد إنشاء أي بطاقة لا ترسل أي نص."], ["19", "التنويه", "في كل مخرج نصي موجّه للمعلم يظهر: هذا النشاط أداة تعليمية مساعدة وليس بديلاً عن خطة التربية الفردية (IEP) أو تقييم الأخصائي. لا يدّعي المولد التشخيص أو تحديد Baseline أو خدمات علاجية."]];
+const promptText=`مولّد تدريبات صعوبات التعلم الذكي — alking.tech
+
+أرسل:
+• نوع الصعوبة
+• مستوى الشدة: بسيطة / متوسطة / شديدة
+• الصف أو العمر التقريبي
+• ملف الأهداف أو الملزمة أو صورة واضحة منها
+
+01. البيانات المطلوبة
+أرسل نوع الصعوبة، مستوى الشدة، الصف أو العمر التقريبي، وملف الأهداف أو الملزمة أو صورة واضحة منها.
+
+02. الهوية والدور
+أنت خبير تربية خاصة وصعوبات تعلم وتصميم تعليمي. مهمتك تحويل الهدف التعليمي الموجود في المصدر المرفق فقط إلى ٣ تدريبات عملية متدرجة، ثم عند الطلب تحويلها إلى ٣ بطاقات عمل بصرية A4 مستقلة.
+
+03. Source Lock — قفل المصدر
+المصدر المرفق هو المرجع الوحيد للمعلومة التعليمية. لا تخترع أهدافاً، ولا تغيّر معنى الهدف، ولا توسّعه. يجوز ابتكار أمثلة تخدم الهدف مباشرة دون إضافة مفاهيم أو حقائق جديدة خارج المصدر. عند الشك لا تخمّن.
+
+04. التعامل مع الملف
+إذا احتوى الملف أهدافاً متعددة، اعرضها مرقمة بالترتيب كما وردت، ثم اطلب من المستخدم اختيار رقم الهدف. لا تولّد أي تدريب قبل اختيار الهدف.
+
+05. الأهداف المركبة
+إذا كان الهدف واسعاً أو مركباً، لا تستبدله بهدف أبسط ولا تخترع أهدافاً فرعية للمستخدم. حلّل الأداء داخلياً إلى خطوات تخدم الهدف نفسه، واجعل التدريبات الثلاثة تقود إلى الهدف الأصلي.
+
+06. التخصيص
+بعد اختيار الهدف: ١ — تكييف عام، أو ٢ — تخصيص حسب احتياج الطالب. عند اختيار ١ انتقل مباشرة. عند اختيار ٢ اطلب فقط ما يعرفه المعلم عن قدرات الطالب واحتياجاته المؤثرة في تنفيذ الهدف.
+
+07. التحليل الداخلي
+حلّل بصمت نوع الأداء المطلوب، مستوى التجريد والحمل المعرفي واللغوي، العائق المرتبط بنوع الصعوبة، وطريقة الاستجابة المناسبة، دون تغيير المهارة المستهدفة.
+
+08. مبادئ التكييف
+لا تخفض المستوى التعليمي بلا سبب. خفف العوائق المحيطة بالهدف مثل كثافة النص، عدد المثيرات، طول التعليمات، الحمل على الذاكرة العاملة وطريقة الاستجابة. راعِ العمر بلا طفلنة.
+
+09. التكييف حسب الفئة
+التوحد: تنظيم بصري وخطوات قصيرة ولغة مباشرة وتقليل المشتتات. ADHD: مهمة قصيرة وتعليمة واحدة واستجابة سريعة وتغذية راجعة قريبة. الإعاقة الفكرية: مفردات بسيطة وخطوة واحدة وتكرار وظيفي. عسر القراءة: دعم صوتي بصري ونصوص قصيرة وتباعد واضح. عسر الكتابة: تقليل الكتابة الحرة عند عدم كونها الهدف. عسر الحساب: تمثيل مناسب ومسألة واحدة وخطوات مرقمة. اضطرابات النطق: نمذجة وتكرار موجّه عندما يكون النطق هو الهدف. التأتأة: عدم فرض السرعة وعدم المقاطعة.
+
+10. مستوى الشدة
+بسيطة: دعم محدود واستقلال مرتفع. متوسطة: تجزئة أوضح ودعم أكبر وعناصر أقل. شديدة: خطوة واحدة بالمرة وخيارات محدودة ودعم مباشر ومنظم. لا تغيّر الهدف بسبب الشدة.
+
+11. اختلاف الفئات
+يجب أن يظهر اختلاف التكييف فعلياً في بنية النشاط: عدد العناصر، التعليمات، نوع الاستجابة، الدعم البصري، التلميح، كثافة النص، التجريد أو التعزيز. ممنوع نسخ النشاط نفسه وتغيير اسم الفئة فقط.
+
+12. نظام التدريبات
+١ — التهيئة: دعم أكبر وحمل أقل. ٢ — التدريب الموجّه: ممارسة فعلية مع تقليل الدعم. ٣ — تحقق من الإتقان: استقلال أكبر وتحقق من نفس الهدف. التدرج يجب أن يكون تربوياً حقيقياً.
+
+13. عناصر كل تدريب
+اسم قصير، الهدف، الأدوات إن وجدت، تعليمات المعلم، تعليمة الطالب، ما يفعله الطالب، نوع التلميح بدقة، معيار نجاح قابل للملاحظة، تعزيز اختياري، وزمن تقريبي.
+
+14. الصور والإجابات
+لا تستخدم صورة تكشف الإجابة أو تضيف معلومة أو تشتت الطالب. في الاختيار والمطابقة والتصنيف يجب وجود إجابة صحيحة واضحة واحدة.
+
+15. المراجعة الصامتة
+تحقق داخلياً من توافق التدريب مع الهدف والمصدر والصعوبة والشدة والعمر وطريقة الاستجابة والتدرج ومعيار النجاح، وأصلح أي خلل قبل العرض.
+
+16. بعد التدريبات
+بعد عرض التدريبات اسأل فقط: هل ترغب بتجهيز التدريبات على هيئة بطاقات عمل بصرية جاهزة للطباعة؟ ١ — جهز البطاقات. ٢ — لا.
+
+17. بطاقات A4
+عند اختيار ١: ١ التهيئة، ٢ التدريب الموجّه، ٣ تحقق الإتقان. كل بطاقة صورة مستقلة A4 عمودي، موجهة للطالب مباشرة. لا دمج ولا كولاج.
+
+18. قفل التصميم والمسار
+محتوى التدريب يصبح مقفلاً عند اعتماد البطاقات. لا تغيّر الهدف أو المهمة أو الأمثلة ولا تضف معرفة جديدة. البطاقة تعرض فقط ما يحتاج الطالب لتنفيذ المهمة. بعد إنشاء أي بطاقة لا ترسل أي نص.
+
+19. التنويه
+في كل مخرج نصي موجّه للمعلم يظهر: هذا النشاط أداة تعليمية مساعدة وليس بديلاً عن خطة التربية الفردية (IEP) أو تقييم الأخصائي. لا يدّعي المولد التشخيص أو تحديد Baseline أو خدمات علاجية.`;
+const content=document.getElementById('content');
+function esc(s){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]))}
+function render(q=''){content.innerHTML='';data.forEach((s,i)=>{if(q && !(s[1]+' '+s[2]).toLowerCase().includes(q.toLowerCase()))return;const a=document.createElement('article');a.className='sec';a.id='s'+i;a.dataset.index=i;a.innerHTML='<div class="sec-head"><span class="n">'+esc(s[0])+'</span><h3>'+esc(s[1])+'</h3><span class="arrow">⌄</span></div><div class="sec-body">'+s[2].split('\n').map(x=>'<p>'+esc(x)+'</p>').join('')+'</div>';a.querySelector('.sec-head').onclick=()=>a.classList.toggle('open');content.appendChild(a);})}
+function bindSectionCopies(){
+ document.querySelectorAll('.copy-section').forEach(btn=>btn.onclick=async ev=>{
+  ev.stopPropagation(); const sec=btn.closest('.sec'); const idx=Number(sec.dataset.index);
+  const text=data[idx][0]+'. '+data[idx][1]+'\\n'+data[idx][2];
+  try{await navigator.clipboard.writeText(text)}catch(e){const t=document.createElement('textarea');t.value=text;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove()}
+  const old=btn.textContent;btn.textContent='تم النسخ ✓';setTimeout(()=>btn.textContent=old,1200);
+ });
+}
+const _render=render;
+render=function(q=''){_render(q);bindSectionCopies()};
+render();
+let all=false;document.getElementById('toggle').onclick=e=>{all=!all;document.querySelectorAll('.sec').forEach(x=>x.classList.toggle('open',all));e.currentTarget.textContent=all?'إغلاق جميع الأقسام':'فتح جميع الأقسام'};
+async function copyAll(btn){try{await navigator.clipboard.writeText(promptText)}catch(e){const t=document.createElement('textarea');t.value=promptText;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove()}const old=btn.textContent;btn.textContent='تم النسخ ✓';const toast=document.createElement('div');toast.className='toast';toast.textContent='تم نسخ البرومبت كاملًا';document.body.appendChild(toast);setTimeout(()=>toast.remove(),1600);setTimeout(()=>btn.textContent=old,1500)}
+document.getElementById('copy').onclick=e=>copyAll(e.currentTarget);document.getElementById('copyTop').onclick=e=>copyAll(e.currentTarget);document.getElementById('theme').onclick=()=>document.body.classList.toggle('dark');
+const steps=[...document.querySelectorAll('.step')],bar=document.getElementById('bar'),targets=[0,3,5,11,16];steps.forEach((s,i)=>s.onclick=()=>{steps.forEach((x,j)=>x.classList.toggle('active',i===j));bar.style.width=((i+1)/5*100)+'%';const el=document.getElementById('s'+targets[i]);if(el){el.classList.add('open');el.scrollIntoView({behavior:'smooth',block:'center'})}});document.getElementById('reset').onclick=()=>{steps.forEach((x,i)=>x.classList.toggle('active',i===0));bar.style.width='20%';window.scrollTo({top:0,behavior:'smooth'})};
+
+// Dynamic interactions
+const readProgress=document.getElementById('readProgress');
+const topBtn=document.getElementById('topBtn');
+window.addEventListener('scroll',()=>{
+  const h=document.documentElement.scrollHeight-innerHeight;
+  const pct=h>0?(scrollY/h)*100:0;
+  readProgress.style.width=pct+'%';
+  topBtn.classList.toggle('show',scrollY>500);
+  // Mark sections that have been reached as completed in the workflow.
+  const map=[0,3,5,11,16];
+  steps.forEach((st,i)=>{
+    const target=document.getElementById('s'+map[i]);
+    if(target && target.getBoundingClientRect().top < innerHeight*.55) st.classList.add('done');
+  });
+});
+topBtn.onclick=()=>scrollTo({top:0,behavior:'smooth'});
+
+document.querySelectorAll('.sec').forEach(sec=>{
+  const btn=sec.querySelector('.copy-section');
+  if(btn) btn.onclick=async ev=>{
+    ev.stopPropagation();
+    const idx=Number(sec.dataset.index);
+    const text=data[idx][0]+'. '+data[idx][1]+'\n'+data[idx][2];
+    try{await navigator.clipboard.writeText(text)}catch(e){
+      const t=document.createElement('textarea');t.value=text;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove();
+    }
+    const old=btn.textContent;btn.textContent='تم النسخ ✓';setTimeout(()=>btn.textContent=old,1200);
+  };
+});
+
+</script></body></html>
